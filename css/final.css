@@ -1,0 +1,201 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e1e1e;
+}
+
+.pashupati_text {
+  font-size: 2.5rem;
+  color: #ffa726;
+  margin-bottom: 1rem;
+}
+
+.pashupati_photo img.wid {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Navbar */
+.navbar {
+  background: #333;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-links .menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links .nav_hov {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links .nav_hov:hover {
+  color: #ffa726;
+}
+
+/* Layout */
+.d-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+aside.w_s {
+  background: #1f1f1f;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.inner_padding {
+  padding: 1rem;
+}
+
+h3.bg_orange {
+  background-color: #ffa726;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li.margin10,
+li.margin11 {
+  margin: 1rem 0;
+}
+
+h4 a {
+  color: #ffa726;
+  text-decoration: none;
+}
+
+h4 a:hover {
+  text-decoration: underline;
+}
+
+p span {
+  color: #ffa726;
+  margin-right: 0.5rem;
+}
+
+.content {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+h2.good {
+  color: #ffa726;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.white_color {
+  color: #e0e0e0;
+}
+
+.padding10,
+.padding11 {
+  padding: 1rem 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #181818;
+  color: #ccc;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  margin: 1rem;
+}
+
+.footer-col h4 {
+  color: #ffa726;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffa726;
+}
+
+.social-links a {
+  display: inline-block;
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffa726;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .d-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pashupati_text {
+    font-size: 2rem;
+  }
+}

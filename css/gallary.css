@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav_hov {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav_hov:hover {
+    color: #ffa726;
+}
+
+.hamburger-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 1.25rem;
+    top: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Content */
+.content {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e1e1e;
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: #ffa726;
+    font-weight: 600;
+}
+
+/* Gallery */
+.wapper {
+    padding: 2rem 1rem;
+    background-color: #1f1f1f;
+}
+
+.container2 {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container2 img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.container2 img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+/* Footer */
+.footer {
+    background-color: #181818;
+    color: #ccc;
+    padding: 2rem 1rem;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    margin: 1rem;
+}
+
+.footer-col h4 {
+    color: #ffa726;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #ffa726;
+}
+
+.social-links a {
+    display: inline-block;
+    color: #ccc;
+    margin: 0 10px 10px 0;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffa726;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .container2 img {
+        max-width: 350px;
+        height: 260px;
+    }
+
+    .footer-col {
+        flex: 1 1 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 3.5rem;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 10;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .container2 img {
+        max-width: 300px;
+        height: 220px;
+    }
+
+    .wapper {
+        padding: 1rem;
+    }
+
+    .footer-col {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content h2 {
+        font-size: 1.25rem;
+    }
+
+    .container2 img {
+        max-width: 250px;
+        height: 180px;
+    }
+
+    .wapper {
+        padding: 0.5rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .footer-col ul li a {
+        font-size: 0.875rem;
+    }
+
+    .social-links a {
+        font-size: 1rem;
+        margin: 0 0.5rem 0.5rem;
+    }
+}
